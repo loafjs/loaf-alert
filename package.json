@@ -1,0 +1,24 @@
+{
+  "name": "loaf-alert",
+  "version": "1.0.0",
+  "description": "Create a small notification box that appears briefly and disappears.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loafjs/loaf-alert.git"
+  },
+  "keywords": [
+    "dom",
+    "frontend",
+    "alert"
+  ],
+  "author": "falsy.me <me@falsy.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loafjs/loaf-alert/issues"
+  },
+  "homepage": "https://lab.falsy.me",
+}
