@@ -15,8 +15,8 @@ import { setLoafAlert, showLoafAlert } from 'loaf-alert';
 setLoafAlert();
 
 document.addEventListener('click', () => {
-	// Print message notification box
-	showLoafAlert('Show alert message');
+  // Print message notification box
+  showLoafAlert('Show alert message');
 });
 ```
 The page(DOM) is loaded and runs 'setLoafAlert({options})' once.  
@@ -24,9 +24,9 @@ The page(DOM) is loaded and runs 'setLoafAlert({options})' once.
 ### Options
 ```js
 setLoafAlert({
-	length: 4, // Maximum number of notification boxes to show (Default. 4)
-	duration: 5000, // Duration of exposure of the notification box (Default. 5000 (5s))
-	class: 'custom-class' // Add a class attribute for modify the style (Default. '')
+  length: 4, // Maximum number of notification boxes to show (Default. 4)
+  duration: 5000, // Duration of exposure of the notification box (Default. 5000 (5s))
+  class: 'custom-class' // Add a class attribute for modify the style (Default. '')
 });
 ```
 Then, when the notification message is needed, execute 'showLoafAlert(message)' function.
@@ -57,7 +57,7 @@ The following styles are applied by default.
 After you specify an additional class
 ```js
 setLoafAlert({
-	class: 'custom-class'
+  class: 'custom-class'
 });
 ```
 You can modify the style as shown below.
