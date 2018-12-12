@@ -1,6 +1,6 @@
 {
   "name": "loaf-alert",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a small notification box that appears briefly and disappears.",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,5 @@
   "bugs": {
     "url": "https://github.com/loafjs/loaf-alert/issues"
   },
-  "homepage": "https://lab.falsy.me",
+  "homepage": "https://lab.falsy.me"
 }

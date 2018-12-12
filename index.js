@@ -1,4 +1,4 @@
-const version = '1.0.0';
+const version = '1.0.1';
 
 const prefix = 'loaf-alert-';
 
@@ -35,7 +35,7 @@ const appendStyleElement = () => {
       background: #000;
       margin: 10px 0 0 0;
       color: #fff;
-      min-width: 260px;
+      width: 260px;
       padding: 10px 20px;
       font-size: 13px;
       line-height: 20px;

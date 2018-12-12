@@ -2,7 +2,7 @@ import { setLoafAlert, showLoafAlert } from 'loaf-alert';
 
 setLoafAlert({
   length: 6,
-  duration: 50000,
+  duration: 10000,
   class: 'custom-class'
 });
 
