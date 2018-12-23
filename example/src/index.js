@@ -2,7 +2,7 @@ import lAlert, { setOptions } from '../../index';
 
 setOptions({
   length: 6,
-  duration: 10000,
+  duration: 5000,
   class: 'custom-class'
 });
 

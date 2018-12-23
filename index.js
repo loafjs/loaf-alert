@@ -1,4 +1,4 @@
-const version = '1.1.0';
+const version = '1.1.1';
 const prefix = 'loaf-alert-';
 const options = {
   length: 4,
@@ -10,6 +10,9 @@ const setOptions = (opt) => {
   for(let props in opt) {
     if(typeof options[props] !== 'undefined') {
       options[props] = opt[props];
+      if(props === 'class' && document.getElementById(prefix + 'container')) {
+        document.getElementById(prefix + 'container').setAttribute('class', options.class);
+      }
     }
   }
 };
@@ -46,7 +49,7 @@ let totalCount = 0;
 
 
 class LoafAlert {
-
+  
   constructor() {
     if(!document.getElementById(prefix + 'container')) {
       apendContainerElement();

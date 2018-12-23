@@ -66,7 +66,7 @@ setOptions({
 ```
 You can modify the style as shown below.
 ```css
-.loaf-mini-alert-box.custom-class {
+.custom-class .loaf-alert-box {
   background: #fff;
   color: #000;
 }
