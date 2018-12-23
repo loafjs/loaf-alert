@@ -9,30 +9,32 @@ npm install --save loaf-alert
 
 ## How to use
 ```js
-import { setLoafAlert, showLoafAlert } from 'loaf-alert';
-
-// Run only once
-setLoafAlert();
+import lAlert from 'loaf-alert';
 
 document.addEventListener('click', () => {
   // Print message notification box
-  showLoafAlert('Show alert message');
+  lAlert('Show alert message');
 });
 ```
-The page(DOM) is loaded and runs 'setLoafAlert({options})' once.  
 
 ### Options
+You can get the setOptions function and set the options.
 ```js
-setLoafAlert({
+import { setOptions } from 'loaf-alert';
+
+setOptions({
   length: 4, // Maximum number of notification boxes to show (Default. 4)
   duration: 5000, // Duration of exposure of the notification box (Default. 5000 (5s))
   class: 'custom-class' // Add a class attribute for modify the style (Default. '')
 });
 ```
-Then, when the notification message is needed, execute 'showLoafAlert(message)' function.
 
 ### Alert message
-showLoafAlert('message text or html');
+```js
+import lAlert from 'loaf-alert';
+
+lAlert('message text or html');
+```
 
 ## Modify style
 The following styles are applied by default.
@@ -56,7 +58,9 @@ The following styles are applied by default.
 ```
 After you specify an additional class
 ```js
-setLoafAlert({
+import { setOptions } from 'loaf-alert';
+
+setOptions({
   class: 'custom-class'
 });
 ```

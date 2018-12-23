@@ -1,7 +1,5 @@
-const version = '1.0.1';
-
+const version = '1.1.0';
 const prefix = 'loaf-alert-';
-
 const options = {
   length: 4,
   duration: 5000,
@@ -15,14 +13,12 @@ const setOptions = (opt) => {
     }
   }
 };
-
 const apendContainerElement = () => {
   const container = document.createElement('div');
   container.setAttribute('id', prefix + 'container');
   if(options.class) container.setAttribute('class', options.class);
   document.body.append(container);
 };
-
 const appendStyleElement = () => {
   const style = document.createElement('style');
   style.innerHTML = `
@@ -48,29 +44,38 @@ const appendStyleElement = () => {
 
 let totalCount = 0;
 
-export function setLoafAlert(opt={}) {
-  if(document.getElementById(prefix + 'container')) return;
-  setOptions(opt);
-  apendContainerElement();
-  appendStyleElement();
+
+class LoafAlert {
+
+  constructor() {
+    if(!document.getElementById(prefix + 'container')) {
+      apendContainerElement();
+      appendStyleElement();
+    }
+  }
+
+  showLoafAlert(msg) {
+    const count = totalCount;
+    const alertEl = document.getElementsByClassName(prefix + 'box');
+    const alertLength = alertEl.length;
+    const container = document.getElementById(prefix + 'container');
+    const messageBox = document.createElement('p');
+          messageBox.setAttribute('class', prefix + 'box');
+          messageBox.setAttribute('id', prefix + count);
+          messageBox.innerHTML = msg;
+
+    if(alertLength >= options.length) alertEl[0].remove();
+    container.append(messageBox);
+
+    setTimeout(() => {
+      document.getElementById(prefix + count).remove();
+    }, options.duration);
+
+    return totalCount = count + 1;
+  }
 }
 
-export function showLoafAlert(msg) {
-  const count = totalCount;
-  const alertEl = document.getElementsByClassName(prefix + 'box');
-  const alertLength = alertEl.length;
-  const container = document.getElementById(prefix + 'container');
-  const messageBox = document.createElement('p');
-        messageBox.setAttribute('class', prefix + 'box');
-        messageBox.setAttribute('id', prefix + count);
-        messageBox.innerHTML = msg;
-
-  if(alertLength >= options.length) alertEl[0].remove();
-  container.append(messageBox);
-
-  setTimeout(() => {
-    document.getElementById(prefix + count).remove();
-  }, options.duration);
-
-  return totalCount = count + 1;
+export default function(msg) {
+  return new LoafAlert().showLoafAlert(msg);
 }
+export { setOptions };

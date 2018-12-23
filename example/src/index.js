@@ -1,6 +1,6 @@
-import { setLoafAlert, showLoafAlert } from 'loaf-alert';
+import lAlert, { setOptions } from '../../index';
 
-setLoafAlert({
+setOptions({
   length: 6,
   duration: 10000,
   class: 'custom-class'
@@ -9,6 +9,6 @@ setLoafAlert({
 let count = 0;
 
 document.getElementById('show-alert-button').addEventListener('click', () => {
-  showLoafAlert('Show alert message No.' + count);
+  lAlert('Show alert message No.' + count);
   count++;
 });
