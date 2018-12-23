@@ -17,8 +17,5 @@
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
-  },
-  "dependencies": {
-    "loaf-alert": "^1.0.2"
   }
 }
